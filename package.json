@@ -1,0 +1,10 @@
+{
+  "name": "proxylms",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^1.6.1"
+  }
+}

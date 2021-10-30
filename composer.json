@@ -1,0 +1,13 @@
+{
+  "name": "vtos/proxylms",
+  "description": "",
+  "authors": [
+    {
+      "name": "Vitaly Potenko",
+      "email": "potenkov@gmail.com"
+    }
+  ],
+  "require": {
+    "php:": "^7.4"
+  }
+}
