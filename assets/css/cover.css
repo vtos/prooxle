@@ -22,9 +22,8 @@ body {
 }
 
 .cover-container {
-    max-width: 42em;
+    max-width: 72em;
 }
-
 
 /*
  * Header
@@ -50,4 +49,13 @@ body {
 .nav-masthead .active {
     color: #fff;
     border-bottom-color: #fff;
+}
+
+/*
+ * Courses
+ */
+.courses-container .card-body,
+.courses-container .card-footer {
+    background-color: rgba(var(--bs-gray-400),var(--bs-bg-opacity));
+    text-shadow: none;
 }
