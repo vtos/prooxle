@@ -52,6 +52,14 @@ body {
 }
 
 /*
+ * Footer
+ */
+footer {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+
+/*
  * Courses
  */
 .courses-container .card-body,
