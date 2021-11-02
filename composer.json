@@ -10,5 +10,15 @@
   "require": {
     "php": ">=7.4.25",
     "league/plates": "^3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "ProxyLMS\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
   }
 }
