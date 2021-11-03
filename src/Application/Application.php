@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Application;
+namespace ProxyLMS\Application;
 
-use Application\ListCourses\CourseList;
-use Application\ListCourses\CourseRepository;
+use ProxyLMS\Application\ListCourses\CourseList;
+use ProxyLMS\Application\ListCourses\CourseRepository;
 
 final class Application
 {

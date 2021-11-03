@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Application\ListCourses;
+namespace ProxyLMS\Application\ListCourses;
 
 interface CourseRepository
 {
