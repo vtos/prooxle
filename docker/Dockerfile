@@ -1,11 +1,11 @@
 FROM php:7.4-apache
-WORKDIR /var/www/html/proxle
+WORKDIR /var/www/html/prooxle
 
-COPY apache/proxle.conf /etc/apache2/sites-available/proxle.conf
+COPY apache/prooxle.conf /etc/apache2/sites-available/prooxle.conf
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
     && a2dissite 000-default \
-    && a2ensite proxle \
+    && a2ensite prooxle \
     && service apache2 restart
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer

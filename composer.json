@@ -1,5 +1,5 @@
 {
-  "name": "vtos/proxle",
+  "name": "vtos/prooxle",
   "description": "",
   "authors": [
     {
@@ -13,12 +13,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Proxle\\": "src/"
+      "Prooxle\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Proxle\\Tests\\": "tests/"
+      "Prooxle\\Tests\\": "tests/"
     }
   }
 }

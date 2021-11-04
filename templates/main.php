@@ -43,7 +43,7 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="mb-auto">
         <div>
-            <h3 class="float-md-start mb-0">Proxle</h3>
+            <h3 class="float-md-start mb-0">Prooxle</h3>
             <nav class="nav nav-masthead justify-content-center float-md-end">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                 <a class="nav-link" href="#">Features</a>
@@ -57,7 +57,7 @@
     </main>
 
     <footer class="mt-auto text-white-50">
-        <p class="text-white">Proxle, 2021</p>
+        <p class="text-white">Prooxle, 2021</p>
     </footer>
 </div>
 
