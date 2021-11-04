@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ProxyLMS\Application\ListCourses;
+namespace Proxle\Application\ListCourses;
 
 final class Course
 {

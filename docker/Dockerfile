@@ -1,11 +1,11 @@
 FROM php:7.4-apache
-WORKDIR /var/www/html/proxylms
+WORKDIR /var/www/html/proxle
 
-COPY apache/proxylms.conf /etc/apache2/sites-available/proxylms.conf
+COPY apache/proxle.conf /etc/apache2/sites-available/proxle.conf
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf \
     && a2dissite 000-default \
-    && a2ensite proxylms \
+    && a2ensite proxle \
     && service apache2 restart
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
