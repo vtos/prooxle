@@ -9,7 +9,10 @@
   ],
   "require": {
     "php": ">=7.4.25",
-    "league/plates": "^3.4"
+    "league/plates": "^3.4",
+    "league/route": "^5.1",
+    "laminas/laminas-diactoros": "^2.8",
+    "laminas/laminas-httphandlerrunner": "^2.1"
   },
   "autoload": {
     "psr-4": {
