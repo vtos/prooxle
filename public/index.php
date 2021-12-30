@@ -6,18 +6,20 @@ require_once '../vendor/autoload.php';
 
 use Laminas\Diactoros\ServerRequestFactory;
 use Laminas\HttpHandlerRunner\Emitter\SapiEmitter;
-use League\Plates\Engine as Templating;
 use League\Route\Router;
-use Prooxle\Infrastructure\InMemoryStorage\InMemoryCourseRepository;
+use Prooxle\Infrastructure\ServiceContainer\DevelopmentServiceContainer;
 use Prooxle\Infrastructure\Web\Controllers\ContactInfoController;
 use Prooxle\Infrastructure\Web\Controllers\ListCoursesController;
 use Prooxle\Infrastructure\Web\Controllers\TrainingCentersInfoController;
 
-$templating = new Templating('../templates');
-$courseRepository = new InMemoryCourseRepository();
+$serviceContainer = new DevelopmentServiceContainer();
+$templating = $serviceContainer->templating();
 
 $router = new Router();
-$router->map('GET', '/', new ListCoursesController($templating, $courseRepository));
+$router->map('GET', '/', new ListCoursesController(
+    $templating,
+    $serviceContainer->courseRepository()
+));
 $router->map('GET', '/training-centers', new TrainingCentersInfoController($templating));
 $router->map('GET', '/contact', new ContactInfoController($templating));
 
