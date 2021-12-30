@@ -5,16 +5,14 @@ declare(strict_types=1);
 namespace Prooxle\Infrastructure\Web\Controllers;
 
 use Laminas\Diactoros\Response;
-use League\Plates\Engine as Templating;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class ListCoursesController
+final class ListCoursesController extends AbstractHtmlController
 {
     public function __invoke(ServerRequestInterface $request): ResponseInterface
     {
-        $templating = new Templating('../templates');
-        $html =  $templating->render('courses', [
+        $html =  $this->templating->render('courses', [
             'courses' => [
                 [
                     'name' => 'Course 1',
