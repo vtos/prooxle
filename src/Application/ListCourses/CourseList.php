@@ -21,6 +21,6 @@ final class CourseList implements IteratorAggregate
 
     public function getIterator(): ArrayIterator
     {
-        return new ArrayIterator($this);
+        return new ArrayIterator($this->items);
     }
 }

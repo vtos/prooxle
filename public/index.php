@@ -8,14 +8,16 @@ use Laminas\Diactoros\ServerRequestFactory;
 use Laminas\HttpHandlerRunner\Emitter\SapiEmitter;
 use League\Plates\Engine as Templating;
 use League\Route\Router;
+use Prooxle\Infrastructure\InMemoryStorage\InMemoryCourseRepository;
 use Prooxle\Infrastructure\Web\Controllers\ContactInfoController;
 use Prooxle\Infrastructure\Web\Controllers\ListCoursesController;
 use Prooxle\Infrastructure\Web\Controllers\TrainingCentersInfoController;
 
 $templating = new Templating('../templates');
+$courseRepository = new InMemoryCourseRepository();
 
 $router = new Router();
-$router->map('GET', '/', new ListCoursesController($templating));
+$router->map('GET', '/', new ListCoursesController($templating, $courseRepository));
 $router->map('GET', '/training-centers', new TrainingCentersInfoController($templating));
 $router->map('GET', '/contact', new ContactInfoController($templating));
 
