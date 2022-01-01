@@ -9,7 +9,7 @@ use Prooxle\Infrastructure\InMemoryStorage\InMemoryCourseRepository;
 
 final class DevelopmentServiceContainer extends AbstractServiceContainer
 {
-    public function courseRepository(): CourseRepository
+    public function courseListRepository(): CourseRepository
     {
         return new InMemoryCourseRepository();
     }

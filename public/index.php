@@ -11,6 +11,7 @@ use Prooxle\Infrastructure\ServiceContainer\DevelopmentServiceContainer;
 use Prooxle\Infrastructure\Web\Controllers\ContactInfoController;
 use Prooxle\Infrastructure\Web\Controllers\ListCoursesController;
 use Prooxle\Infrastructure\Web\Controllers\TrainingCentersInfoController;
+use Prooxle\Infrastructure\Web\Controllers\ViewCourseController;
 
 $serviceContainer = new DevelopmentServiceContainer();
 $templating = $serviceContainer->templating();
@@ -18,7 +19,11 @@ $templating = $serviceContainer->templating();
 $router = new Router();
 $router->map('GET', '/', new ListCoursesController(
     $templating,
-    $serviceContainer->courseRepository()
+    $serviceContainer->listCoursesRepository()
+));
+$router->map('GET', '/course/{id}', new ViewCourseController(
+    $templating,
+    $serviceContainer->viewCourseRepository()
 ));
 $router->map('GET', '/training-centers', new TrainingCentersInfoController($templating));
 $router->map('GET', '/contact', new ContactInfoController($templating));
