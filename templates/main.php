@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
 
     <!-- Bootstrap core CSS -->
-    <link href="build/styles.css" rel="stylesheet">
+    <link href="/build/styles.css" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -38,10 +38,10 @@
         }
     </style>
 </head>
-<body class="d-flex text-center text-white bg-dark">
+<body class="d-flex text-center h-100 text-white bg-dark">
 
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header class="mb-auto">
+    <header class="mb-auto pb-3">
         <div>
             <h3 class="float-md-start mb-0">Prooxle</h3>
             <nav class="nav nav-masthead justify-content-center float-md-end">

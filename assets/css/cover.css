@@ -67,3 +67,9 @@ footer {
     background-color: rgba(var(--bs-gray-400),var(--bs-bg-opacity));
     text-shadow: none;
 }
+
+.course-details-container {
+    background-color: #f8f9fa;
+    text-shadow: none;
+}
+

@@ -21,9 +21,9 @@ $router->map('GET', '/', new ListCoursesController(
     $templating,
     $serviceContainer->listCoursesRepository()
 ));
-$router->map('GET', '/course/{id}', new ViewCourseController(
+$router->map('GET', '/courses/{id}', new ViewCourseController(
     $templating,
-    $serviceContainer->viewCourseRepository()
+    $serviceContainer->application()
 ));
 $router->map('GET', '/training-centers', new TrainingCentersInfoController($templating));
 $router->map('GET', '/contact', new ContactInfoController($templating));

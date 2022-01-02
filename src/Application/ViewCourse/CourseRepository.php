@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Prooxle\Application\ViewCourse;
 
-use Prooxle\Domain\Model\CourseId;
+use Prooxle\Domain\Model\Courses\CourseId;
 
 interface CourseRepository
 {
-    public function getCourse(CourseId $id): Course;
+    public function getCourse(CourseId $id): CourseDetails;
 }

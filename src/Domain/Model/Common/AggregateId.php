@@ -1,10 +1,8 @@
 <?php
 
-declare(strict_types=1);
+namespace Prooxle\Domain\Model\Common;
 
-namespace Prooxle\Domain\Model;
-
-final class CourseId
+trait AggregateId
 {
     private string $id;
 
@@ -16,5 +14,10 @@ final class CourseId
     public function asString(): string
     {
         return $this->id;
+    }
+
+    public static function fromString(string $id): self
+    {
+        return new self($id);
     }
 }

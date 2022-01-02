@@ -4,13 +4,29 @@ declare(strict_types=1);
 
 namespace Prooxle\Infrastructure\ServiceContainer;
 
-use Prooxle\Application\ListCourses\CourseRepository;
+use Prooxle\Application\Application;
+use Prooxle\Application\ListCourses\CourseRepository as ListCoursesRepository;
+use Prooxle\Application\ViewCourse\CourseRepository as ViewCourseRepository;
 use Prooxle\Infrastructure\InMemoryStorage\InMemoryCourseRepository;
 
 final class DevelopmentServiceContainer extends AbstractServiceContainer
 {
-    public function courseListRepository(): CourseRepository
+    private InMemoryCourseRepository $courseRepository;
+
+    public function application(): Application
     {
-        return new InMemoryCourseRepository();
+        return new Application(
+            $this->courseRepository ?? $this->courseRepository = new InMemoryCourseRepository()
+        );
+    }
+
+    public function listCoursesRepository(): ListCoursesRepository
+    {
+        return $this->courseRepository ?? $this->courseRepository = new InMemoryCourseRepository();
+    }
+
+    public function viewCourseRepository(): ViewCourseRepository
+    {
+        return $this->courseRepository ?? $this->courseRepository = new InMemoryCourseRepository();
     }
 }
