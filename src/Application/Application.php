@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Prooxle\Application;
 
+use Prooxle\Application\ListCourses\CourseList;
 use Prooxle\Application\ViewCourse\CourseDetails;
-use Prooxle\Application\ViewCourse\CourseRepository;
 use Prooxle\Domain\Model\Courses\CourseId;
 
 final class Application
@@ -17,7 +17,12 @@ final class Application
         $this->courseRepository = $courseRepository;
     }
 
-    public function viewCourse(string $courseId): CourseDetails
+    public function listCourses(): CourseList
+    {
+        return $this->courseRepository->getList();
+    }
+
+    public function viewCourseDetails(string $courseId): CourseDetails
     {
         return $this->courseRepository->getCourse(
             CourseId::fromString($courseId)

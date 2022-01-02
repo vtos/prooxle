@@ -6,7 +6,6 @@ namespace Prooxle\Infrastructure\ServiceContainer;
 
 use League\Plates\Engine as Templating;
 use Prooxle\Application\Application;
-use Prooxle\Application\ListCourses\CourseRepository as ListCoursesRepository;
 
 abstract class AbstractServiceContainer
 {
@@ -16,6 +15,4 @@ abstract class AbstractServiceContainer
     }
 
     abstract public function application(): Application;
-
-    abstract public function listCoursesRepository(): ListCoursesRepository;
 }

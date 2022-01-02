@@ -24,7 +24,7 @@ final class ViewCourseController
 
     public function __invoke(ServerRequestInterface $request): ResponseInterface
     {
-        $courseDetails = $this->application->viewCourse($request->getAttribute('id') ?? '');
+        $courseDetails = $this->application->viewCourseDetails($request->getAttribute('id') ?? '');
 
         $html = $this->templating->render('course-view', [
             'course' => $courseDetails->asArray(),

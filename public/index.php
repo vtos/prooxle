@@ -19,7 +19,7 @@ $templating = $serviceContainer->templating();
 $router = new Router();
 $router->map('GET', '/', new ListCoursesController(
     $templating,
-    $serviceContainer->listCoursesRepository()
+    $serviceContainer->application()
 ));
 $router->map('GET', '/courses/{id}', new ViewCourseController(
     $templating,

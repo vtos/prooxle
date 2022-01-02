@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Prooxle\Infrastructure\InMemoryStorage;
 
-use Prooxle\Application\ListCourses\Course;
+use Prooxle\Application\CourseRepository;
 use Prooxle\Application\ListCourses\CourseList;
-use Prooxle\Application\ListCourses\CourseRepository as ListCoursesRepository;
-use Prooxle\Application\ViewCourse\CourseRepository as ViewCoursesRepository;
+use Prooxle\Application\ListCourses\CourseListItem;
 use Prooxle\Application\ViewCourse\CourseDetails;
 use Prooxle\Domain\Model\Courses\CourseId;
 
-final class InMemoryCourseRepository implements ListCoursesRepository, ViewCoursesRepository
+final class InMemoryCourseRepository implements CourseRepository
 {
     private const COURSES = [
         [
@@ -47,7 +46,7 @@ final class InMemoryCourseRepository implements ListCoursesRepository, ViewCours
 
         foreach (self::COURSES as $courseAsArray) {
             $courses->add(
-                new Course($courseAsArray['name'])
+                new CourseListItem($courseAsArray['name'])
             );
         }
 

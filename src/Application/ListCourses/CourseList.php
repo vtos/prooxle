@@ -10,11 +10,11 @@ use IteratorAggregate;
 final class CourseList implements IteratorAggregate
 {
     /**
-     * @var Course[]
+     * @var CourseListItem[]
      */
     private array $items = [];
 
-    public function add(Course $item): void
+    public function add(CourseListItem $item): void
     {
         $this->items[] = $item;
     }
