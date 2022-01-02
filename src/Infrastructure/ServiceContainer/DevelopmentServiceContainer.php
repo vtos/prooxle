@@ -24,9 +24,4 @@ final class DevelopmentServiceContainer extends AbstractServiceContainer
     {
         return $this->courseRepository ?? $this->courseRepository = new InMemoryCourseRepository();
     }
-
-    public function viewCourseRepository(): ViewCourseRepository
-    {
-        return $this->courseRepository ?? $this->courseRepository = new InMemoryCourseRepository();
-    }
 }
