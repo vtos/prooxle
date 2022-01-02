@@ -57,6 +57,15 @@ body {
     border-bottom-color: #fff;
 }
 
+.breadcrumb-container {
+    background-color: #f8f9fa;
+    text-shadow: none;
+}
+
+.breadcrumb-container ol.breadcrumb {
+    margin-bottom: 0;
+}
+
 /*
  * Footer
  */

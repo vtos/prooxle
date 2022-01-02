@@ -46,7 +46,7 @@ final class InMemoryCourseRepository implements CourseRepository
 
         foreach (self::COURSES as $courseAsArray) {
             $courses->add(
-                new CourseListItem($courseAsArray['name'])
+                new CourseListItem($courseAsArray['id'], $courseAsArray['name'])
             );
         }
 

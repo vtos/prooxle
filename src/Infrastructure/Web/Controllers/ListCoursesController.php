@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Prooxle\Infrastructure\Web\Controllers;
 
+use Exception;
 use Laminas\Diactoros\Response;
 use League\Plates\Engine as Templating;
 use Prooxle\Application\Application;
+use Prooxle\Application\ListCourses\CourseListItem;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -22,17 +24,16 @@ final class ListCoursesController
         $this->application = $application;
     }
 
+    /**
+     * @throws Exception
+     */
     public function __invoke(ServerRequestInterface $request): ResponseInterface
     {
-        $coursesArray = [];
-        foreach ($this->application->listCourses() as $course) {
-            $coursesArray[] = [
-                'name' => $course->name(),
-            ];
-        }
-
         $html = $this->templating->render('courses', [
-            'courses' => $coursesArray
+            'courses' => array_map(
+                fn(CourseListItem $course): array => $course->asArray(),
+                $this->application->listCourses()->getIterator()->getArrayCopy()
+            )
         ]);
 
         $response = new Response();

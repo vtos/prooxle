@@ -6,15 +6,21 @@ namespace Prooxle\Application\ListCourses;
 
 final class CourseListItem
 {
+    private string $id;
+
     private string $name;
 
-    public function __construct(string $name)
+    public function __construct(string $id, string $name)
     {
+        $this->id = $id;
         $this->name = $name;
     }
 
-    public function name(): string
+    public function asArray(): array
     {
-        return $this->name;
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+        ];
     }
 }

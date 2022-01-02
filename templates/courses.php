@@ -6,13 +6,6 @@ $this->layout('main', [
 ?>
 
 <h1>Our Courses</h1>
-<p class="lead">
-    Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.
-</p>
-<p class="lead">
-    <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-</p>
-
 <div class="courses-container row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     <?php foreach($courses as $course): ?>
         <div class="col">
@@ -22,8 +15,8 @@ $this->layout('main', [
                 <div class="card-body">
                     <h5 class="card-title"><?=$this->e($course['name'])?></h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <a class="stretched-link" href="/courses/<?=$course['id']?>">View details</a>
                 </div>
-
                 <div class="card-footer">
                     <p class="card-text">Some stuff</p>
                 </div>
