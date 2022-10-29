@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo "Pulling Docker images..."
+docker-compose pull
+
+echo "Building images and installing Composer dependencies..."
+docker-compose run webserver composer install
