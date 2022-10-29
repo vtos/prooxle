@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo "Starting application containers..."
+docker-compose up
+
+echo ""
+echo "The web application is available on http://localhost:8086 in your browser"
+echo ""
