@@ -6,11 +6,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
+
     <title><?=$this->e($title)?></title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
-
-    <!-- Bootstrap core CSS -->
     <link href="/build/styles.css" rel="stylesheet">
 
     <!-- Favicons -->
@@ -38,30 +36,47 @@
         }
     </style>
 </head>
-<body class="d-flex text-center h-100 text-white bg-dark">
+<body class="d-flex flex-column h-100 bg-light">
 
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header class="mb-auto pb-3">
-        <div>
-            <h3 class="float-md-start mb-0">Prooxle</h3>
-            <nav class="nav nav-masthead justify-content-center float-md-end">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-                <a class="nav-link" href="/training-centers">Training Centers</a>
-                <a class="nav-link" href="/contact">Contact</a>
-            </nav>
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark bg-gradient">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PROOXLE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/training-centers">Training Centers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
+</header>
 
-    <main class="px-3">
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+    <div class="container">
         <?=$this->section('content')?>
-    </main>
+    </div>
+</main>
 
-    <footer class="mt-auto text-white-50">
-        <p class="text-white">Prooxle, 2021</p>
-    </footer>
-</div>
+<footer class="footer mt-auto py-3 bg-secondary bg-gradient">
+    <div class="container">
+        <span class="text-white">2022</span>
+    </div>
+</footer>
 
-
+<script src="/build/scripts.js"></script>
 
 </body>
 </html>

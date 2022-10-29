@@ -5,11 +5,11 @@ Encore
     .setPublicPath('/build')
     .disableSingleRuntimeChunk()
     .addEntry('scripts', [
-        './node_modules/bootstrap/dist/js/bootstrap.min.js',
+        './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
     ])
     .addStyleEntry('styles', [
         './node_modules/bootstrap/dist/css/bootstrap.min.css',
-        './assets/css/cover.css',
+        './assets/css/prooxle.css',
     ])
 
 module.exports = Encore.getWebpackConfig()
