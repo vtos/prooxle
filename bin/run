@@ -3,7 +3,7 @@
 set -e
 
 echo "Starting application containers..."
-docker-compose up
+docker-compose up -d
 
 echo ""
 echo "The web application is available on http://localhost:8086 in your browser"
