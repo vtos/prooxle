@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+
+echo "Running test suites..."
+
+docker-compose run webserver vendor/bin/phpunit
