@@ -11,5 +11,8 @@
         <testsuite name="unit">
             <directory>test/Unit</directory>
         </testsuite>
+        <testsuite name="contract">
+            <directory>test/Contract</directory>
+        </testsuite>
     </testsuites>
 </phpunit>
