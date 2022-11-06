@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Prooxle\Module\Catalog\Domain\Model\Courses;
 
-use Prooxle\Module\Catalog\Domain\Model\Common\AggregateId;
+use Prooxle\Common\Domain\Model\AggregateId;
 
 final class CourseId
 {

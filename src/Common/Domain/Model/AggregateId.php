@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Prooxle\Module\Catalog\Domain\Model\Common;
+namespace Prooxle\Common\Domain\Model;
 
 trait AggregateId
 {
