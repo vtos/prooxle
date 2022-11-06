@@ -12,7 +12,8 @@
     "league/plates": "^3.4",
     "league/route": "^5.1",
     "laminas/laminas-diactoros": "^2.8",
-    "laminas/laminas-httphandlerrunner": "^2.1"
+    "laminas/laminas-httphandlerrunner": "^2.1",
+    "ramsey/uuid": "^4.2"
   },
   "autoload": {
     "psr-4": {

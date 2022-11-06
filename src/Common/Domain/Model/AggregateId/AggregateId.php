@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Prooxle\Common\Domain\Model;
+namespace Prooxle\Common\Domain\Model\AggregateId;
 
 trait AggregateId
 {
@@ -21,5 +21,10 @@ trait AggregateId
     public static function fromString(string $id): self
     {
         return new self($id);
+    }
+
+    public static function fromRandomStringUuid(UuidProvider $uuidProvider): self
+    {
+        return new self($uuidProvider->generateStringUuid());
     }
 }
