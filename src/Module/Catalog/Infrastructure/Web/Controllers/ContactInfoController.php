@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Prooxle\Infrastructure\Web\Controllers;
+namespace Prooxle\Module\Catalog\Infrastructure\Web\Controllers;
 
 use Laminas\Diactoros\Response;
 use League\Plates\Engine as Templating;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-final class TrainingCentersInfoController
+final class ContactInfoController
 {
     private Templating $templating;
 
@@ -21,7 +21,7 @@ final class TrainingCentersInfoController
     public function __invoke(ServerRequestInterface $request): ResponseInterface
     {
         $response = new Response();
-        $response->getBody()->write($this->templating->render('training-centers'));
+        $response->getBody()->write($this->templating->render('contact'));
 
         return $response;
     }

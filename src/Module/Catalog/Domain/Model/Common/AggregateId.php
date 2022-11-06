@@ -1,6 +1,8 @@
 <?php
 
-namespace Prooxle\Domain\Model\Common;
+declare(strict_types=1);
+
+namespace Prooxle\Module\Catalog\Domain\Model\Common;
 
 trait AggregateId
 {

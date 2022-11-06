@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Prooxle\Application\ListCourses;
+namespace Prooxle\Module\Catalog\Application\ListCourses;
 
 use ArrayIterator;
 use IteratorAggregate;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Prooxle\Application\ViewCourse;
+namespace Prooxle\Module\Catalog\Application\ViewCourse;
 
 final class CourseDetails
 {

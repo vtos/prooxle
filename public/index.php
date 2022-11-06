@@ -7,11 +7,11 @@ require_once '../vendor/autoload.php';
 use Laminas\Diactoros\ServerRequestFactory;
 use Laminas\HttpHandlerRunner\Emitter\SapiEmitter;
 use League\Route\Router;
-use Prooxle\Infrastructure\ServiceContainer\DevelopmentServiceContainer;
-use Prooxle\Infrastructure\Web\Controllers\ContactInfoController;
-use Prooxle\Infrastructure\Web\Controllers\ListCoursesController;
-use Prooxle\Infrastructure\Web\Controllers\TrainingCentersInfoController;
-use Prooxle\Infrastructure\Web\Controllers\ViewCourseController;
+use Prooxle\Module\Catalog\Infrastructure\ServiceContainer\DevelopmentServiceContainer;
+use Prooxle\Module\Catalog\Infrastructure\Web\Controllers\ContactInfoController;
+use Prooxle\Module\Catalog\Infrastructure\Web\Controllers\ListCoursesController;
+use Prooxle\Module\Catalog\Infrastructure\Web\Controllers\TrainingCentersInfoController;
+use Prooxle\Module\Catalog\Infrastructure\Web\Controllers\ViewCourseController;
 
 $serviceContainer = new DevelopmentServiceContainer();
 $templating = $serviceContainer->templating();

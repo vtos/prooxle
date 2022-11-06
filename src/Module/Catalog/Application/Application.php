@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Prooxle\Application;
+namespace Prooxle\Module\Catalog\Application;
 
-use Prooxle\Application\ListCourses\CourseList;
-use Prooxle\Application\ViewCourse\CourseDetails;
-use Prooxle\Domain\Model\Courses\CourseId;
+use Prooxle\Module\Catalog\Application\ListCourses\CourseList;
+use Prooxle\Module\Catalog\Application\ViewCourse\CourseDetails;
+use Prooxle\Module\Catalog\Domain\Model\Courses\CourseId;
 
 final class Application
 {

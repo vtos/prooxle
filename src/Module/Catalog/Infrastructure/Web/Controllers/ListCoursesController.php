@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Prooxle\Infrastructure\Web\Controllers;
+namespace Prooxle\Module\Catalog\Infrastructure\Web\Controllers;
 
 use Exception;
 use Laminas\Diactoros\Response;
 use League\Plates\Engine as Templating;
-use Prooxle\Application\Application;
-use Prooxle\Application\ListCourses\CourseListItem;
+use Prooxle\Module\Catalog\Application\Application;
+use Prooxle\Module\Catalog\Application\ListCourses\CourseListItem;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 

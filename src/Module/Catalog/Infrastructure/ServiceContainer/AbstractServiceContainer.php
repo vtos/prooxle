@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Prooxle\Infrastructure\ServiceContainer;
+namespace Prooxle\Module\Catalog\Infrastructure\ServiceContainer;
 
 use League\Plates\Engine as Templating;
-use Prooxle\Application\Application;
+use Prooxle\Module\Catalog\Application\Application;
 
 abstract class AbstractServiceContainer
 {
